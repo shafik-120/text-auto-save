@@ -17,7 +17,10 @@
           <RouterLink to="/" class="nav-link active" aria-current="page" >Home</RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink to="/about" class="nav-link" >About</RouterLink>
+          <RouterLink to="/about" class="nav-link" >Shafikul</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink to="/muslima" class="nav-link" >Muslima</RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink to="/product" class="nav-link" >Product</RouterLink>
