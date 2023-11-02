@@ -1,9 +1,10 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { collection, onSnapshot, doc, updateDoc } from "firebase/firestore";
+import { collection, onSnapshot, doc, updateDoc, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 const getText = ref([]);
 
+// Call The Value FireBase
 onMounted(() => {
   onSnapshot(collection(db, "savetext"), (querySnapshot) => {
     const products = [];
@@ -18,6 +19,7 @@ onMounted(() => {
   });
 });
 
+// Update Value
 const updateText = (updatedText) => {
   const docRef = doc(db, "savetext", updatedText.id);
   updateDoc(docRef, {
@@ -28,15 +30,29 @@ const updateText = (updatedText) => {
     });
 };
 
+//Row Expanded
 const calculateRows = (text) => {
+  // console.log(text);
   // Calculate the number of line breaks in the text and adjust rows accordingly
   return text.split("\n").length;
 };
+
+// Adding Text
+const addingItem = ref('')
+const addingInput = () => {
+    addDoc(collection(db, "product"), {
+        text: addingItem.value.text
+    });
+    addingItem.value = ''
+}
+
 </script>
 <template>
   <div class="container-fluid mb-5">
     <div class="row">
       <div class="col-md-12">
+        <button @click="addingInput">Add Item</button>
+
         <div class="text" v-for="text in getText" :key="text.id">
           <h3 class="mb-3">Please Insert Your Text</h3>
           <div class="form-floating">

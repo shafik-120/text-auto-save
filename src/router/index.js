@@ -10,9 +10,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
+      path: '/shafikul-text',
+      name: 'shafikul-text',
+      component: () => import('../views/Shafikul.vue')
     },
     {
       path: '/muslima',
@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/product',
       name: 'product',
       component: ()=> import('../components/Product.vue')
+    },
+    {
+      path: '/testwork',
+      name: 'testwork',
+      component: ()=> import('../components/Test.vue')
     }
   ]
 })

@@ -17,7 +17,7 @@
           <RouterLink to="/" class="nav-link active" aria-current="page" >Home</RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink to="/about" class="nav-link" >Shafikul</RouterLink>
+          <RouterLink to="/shafikul-text" class="nav-link" >Shafikul</RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink to="/muslima" class="nav-link" >Muslima</RouterLink>
@@ -25,19 +25,9 @@
         <li class="nav-item">
           <RouterLink to="/product" class="nav-link" >Product</RouterLink>
         </li>
-        <li class="nav-item dropdown">
-          <RouterLink to="/" class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </RouterLink>
-          <ul class="dropdown-menu">
-            <li><RouterLink to="/" class="dropdown-item" >Action</RouterLink></li>
-            <li><RouterLink to="/" class="dropdown-item" >Another action</RouterLink></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><RouterLink to="/" class="dropdown-item" >Something else here</RouterLink></li>
-          </ul>
-        </li>
+        
         <li class="nav-item">
-          <RouterLink to="/" class="nav-link disabled" aria-disabled="true">Disabled</RouterLink>
+          <RouterLink to="/testwork" class="nav-link " >Test</RouterLink>
         </li>
       </ul>
       <form class="d-flex" role="search">
