@@ -1,13 +1,14 @@
 <script setup>
 //import { ref, reactive } from 'vue'
 //import  from '.'
+import { auth } from '../stores/Auth';
 
 </script>
 
 <template>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <RouterLink to="/" class="navbar-brand" >NavBar</RouterLink>
+    <RouterLink to="/" class="navbar-brand" >( {{ auth.userName }} )</RouterLink>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,14 +26,16 @@
         <li class="nav-item">
           <RouterLink to="/product" class="nav-link" >Product</RouterLink>
         </li>
-        
+        <li class="nav-item">
+          <RouterLink to="/login" class="nav-link" >login</RouterLink>
+        </li>
         <li class="nav-item">
           <RouterLink to="/testwork" class="nav-link " >Test</RouterLink>
-        </li>
+        </li> 
+
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="" >
+        <button @click="auth.logout()" class="btn btn-outline-success" type="button">Log-Out</button>
       </form>
     </div>
   </div>

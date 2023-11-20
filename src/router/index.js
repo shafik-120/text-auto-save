@@ -28,6 +28,16 @@ const router = createRouter({
       path: '/testwork',
       name: 'testwork',
       component: ()=> import('../components/Test.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: ()=> import('../components/Login.vue')
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: ()=> import('../components/SignUp.vue')
     }
   ]
 })
